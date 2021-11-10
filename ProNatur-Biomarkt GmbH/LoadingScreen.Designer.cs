@@ -42,9 +42,10 @@ namespace ProNatur_Biomarkt_GmbH
             // loadingProgressBar
             // 
             this.loadingProgressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.loadingProgressBar.Location = new System.Drawing.Point(-1, 280);
+            this.loadingProgressBar.Location = new System.Drawing.Point(0, 204);
+            this.loadingProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingProgressBar.Name = "loadingProgressBar";
-            this.loadingProgressBar.Size = new System.Drawing.Size(785, 23);
+            this.loadingProgressBar.Size = new System.Drawing.Size(705, 19);
             this.loadingProgressBar.TabIndex = 0;
             // 
             // label1
@@ -52,9 +53,10 @@ namespace ProNatur_Biomarkt_GmbH
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(332, 252);
+            this.label1.Location = new System.Drawing.Point(321, 189);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 25);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Loading";
             // 
@@ -63,18 +65,20 @@ namespace ProNatur_Biomarkt_GmbH
             this.lblLoadingProgress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblLoadingProgress.AutoSize = true;
             this.lblLoadingProgress.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLoadingProgress.Location = new System.Drawing.Point(427, 252);
+            this.lblLoadingProgress.Location = new System.Drawing.Point(369, 189);
+            this.lblLoadingProgress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLoadingProgress.Name = "lblLoadingProgress";
-            this.lblLoadingProgress.Size = new System.Drawing.Size(43, 25);
+            this.lblLoadingProgress.Size = new System.Drawing.Size(21, 13);
             this.lblLoadingProgress.TabIndex = 2;
             this.lblLoadingProgress.Text = "0%";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(761, 235);
+            this.pictureBox1.Size = new System.Drawing.Size(705, 181);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -84,15 +88,16 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             // LoadingScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(783, 315);
+            this.ClientSize = new System.Drawing.Size(703, 222);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLoadingProgress);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loadingProgressBar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoadingScreen";
