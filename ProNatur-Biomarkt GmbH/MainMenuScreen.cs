@@ -19,7 +19,14 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btnBill_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Dies ist ein Test");
+        }
 
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            ProductsScreen productsScreen = new ProductsScreen();
+            productsScreen.Show();
+            this.Hide();
         }
     }
 }
