@@ -32,7 +32,6 @@ namespace ProNatur_Biomarkt_GmbH
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxBrand = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,35 +60,27 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             // textBoxProductName
             // 
+            this.textBoxProductName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.textBoxProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxProductName.ForeColor = System.Drawing.Color.White;
             this.textBoxProductName.Location = new System.Drawing.Point(160, 22);
             this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new System.Drawing.Size(264, 24);
+            this.textBoxProductName.Size = new System.Drawing.Size(264, 31);
             this.textBoxProductName.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Name";
             // 
             // textBoxBrand
             // 
             this.textBoxBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.textBoxBrand.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBrand.ForeColor = System.Drawing.Color.White;
-            this.textBoxBrand.Location = new System.Drawing.Point(160, 64);
+            this.textBoxBrand.Location = new System.Drawing.Point(640, 24);
             this.textBoxBrand.Name = "textBoxBrand";
-            this.textBoxBrand.Size = new System.Drawing.Size(264, 24);
-            this.textBoxBrand.TabIndex = 5;
+            this.textBoxBrand.Size = new System.Drawing.Size(264, 31);
+            this.textBoxBrand.TabIndex = 2;
+            this.textBoxBrand.TextChanged += new System.EventHandler(this.textBoxBrand_TextChanged);
             // 
             // label3
             // 
@@ -97,7 +88,7 @@ namespace ProNatur_Biomarkt_GmbH
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 58);
+            this.label3.Location = new System.Drawing.Point(503, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 4;
@@ -109,7 +100,7 @@ namespace ProNatur_Biomarkt_GmbH
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 98);
+            this.label4.Location = new System.Drawing.Point(24, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 25);
             this.label4.TabIndex = 6;
@@ -119,11 +110,12 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             this.textBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice.ForeColor = System.Drawing.Color.White;
-            this.textBoxPrice.Location = new System.Drawing.Point(160, 144);
+            this.textBoxPrice.Location = new System.Drawing.Point(640, 88);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(162, 24);
-            this.textBoxPrice.TabIndex = 9;
+            this.textBoxPrice.Size = new System.Drawing.Size(160, 31);
+            this.textBoxPrice.TabIndex = 4;
             // 
             // label5
             // 
@@ -131,7 +123,7 @@ namespace ProNatur_Biomarkt_GmbH
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(23, 138);
+            this.label5.Location = new System.Drawing.Point(503, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 25);
             this.label5.TabIndex = 8;
@@ -141,6 +133,7 @@ namespace ProNatur_Biomarkt_GmbH
             // 
             this.comboBoxCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.comboBoxCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategory.ForeColor = System.Drawing.Color.White;
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Items.AddRange(new object[] {
@@ -149,20 +142,20 @@ namespace ProNatur_Biomarkt_GmbH
             "Getränke",
             "Fleisch",
             "Fisch"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(160, 104);
+            this.comboBoxCategory.Location = new System.Drawing.Point(160, 88);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(208, 33);
-            this.comboBoxCategory.TabIndex = 10;
+            this.comboBoxCategory.Size = new System.Drawing.Size(208, 39);
+            this.comboBoxCategory.TabIndex = 3;
             // 
             // btnProductSave
             // 
             this.btnProductSave.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnProductSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProductSave.Location = new System.Drawing.Point(144, 176);
+            this.btnProductSave.Location = new System.Drawing.Point(144, 200);
             this.btnProductSave.Name = "btnProductSave";
             this.btnProductSave.Size = new System.Drawing.Size(136, 56);
-            this.btnProductSave.TabIndex = 11;
+            this.btnProductSave.TabIndex = 5;
             this.btnProductSave.Text = "Speichern";
             this.btnProductSave.UseVisualStyleBackColor = false;
             this.btnProductSave.Click += new System.EventHandler(this.btnProductSave_Click);
@@ -172,10 +165,10 @@ namespace ProNatur_Biomarkt_GmbH
             this.btnProductEdit.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnProductEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProductEdit.Location = new System.Drawing.Point(288, 176);
+            this.btnProductEdit.Location = new System.Drawing.Point(312, 200);
             this.btnProductEdit.Name = "btnProductEdit";
             this.btnProductEdit.Size = new System.Drawing.Size(136, 56);
-            this.btnProductEdit.TabIndex = 12;
+            this.btnProductEdit.TabIndex = 6;
             this.btnProductEdit.Text = "Bearbeiten";
             this.btnProductEdit.UseVisualStyleBackColor = false;
             this.btnProductEdit.Click += new System.EventHandler(this.btnProductEdit_Click);
@@ -185,10 +178,10 @@ namespace ProNatur_Biomarkt_GmbH
             this.btnProductClear.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnProductClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProductClear.Location = new System.Drawing.Point(432, 176);
+            this.btnProductClear.Location = new System.Drawing.Point(472, 200);
             this.btnProductClear.Name = "btnProductClear";
             this.btnProductClear.Size = new System.Drawing.Size(144, 56);
-            this.btnProductClear.TabIndex = 13;
+            this.btnProductClear.TabIndex = 7;
             this.btnProductClear.Text = "Leeren";
             this.btnProductClear.UseVisualStyleBackColor = false;
             this.btnProductClear.Click += new System.EventHandler(this.btnProductClear_Click);
@@ -198,10 +191,10 @@ namespace ProNatur_Biomarkt_GmbH
             this.btnProductDelete.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnProductDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProductDelete.Location = new System.Drawing.Point(584, 176);
+            this.btnProductDelete.Location = new System.Drawing.Point(640, 200);
             this.btnProductDelete.Name = "btnProductDelete";
             this.btnProductDelete.Size = new System.Drawing.Size(144, 56);
-            this.btnProductDelete.TabIndex = 14;
+            this.btnProductDelete.TabIndex = 8;
             this.btnProductDelete.Text = "Löschen";
             this.btnProductDelete.UseVisualStyleBackColor = false;
             this.btnProductDelete.Click += new System.EventHandler(this.btnProductDelete_Click);
@@ -215,7 +208,8 @@ namespace ProNatur_Biomarkt_GmbH
             this.productsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productsDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.productsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDGV.Location = new System.Drawing.Point(8, 240);
+            this.productsDGV.Location = new System.Drawing.Point(8, 272);
+            this.productsDGV.MultiSelect = false;
             this.productsDGV.Name = "productsDGV";
             this.productsDGV.ReadOnly = true;
             this.productsDGV.RowHeadersVisible = false;
@@ -224,15 +218,18 @@ namespace ProNatur_Biomarkt_GmbH
             this.productsDGV.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.productsDGV.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.productsDGV.RowTemplate.Height = 33;
-            this.productsDGV.Size = new System.Drawing.Size(1240, 528);
+            this.productsDGV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.productsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.productsDGV.Size = new System.Drawing.Size(1360, 632);
             this.productsDGV.TabIndex = 15;
+            this.productsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDGV_CellContentClick);
             // 
             // ProductsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1251, 777);
+            this.ClientSize = new System.Drawing.Size(1370, 906);
             this.Controls.Add(this.productsDGV);
             this.Controls.Add(this.btnProductDelete);
             this.Controls.Add(this.btnProductClear);
@@ -244,7 +241,6 @@ namespace ProNatur_Biomarkt_GmbH
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxBrand);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxProductName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -262,7 +258,6 @@ namespace ProNatur_Biomarkt_GmbH
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxProductName;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxBrand;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
