@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.textInvoiceNumber = new System.Windows.Forms.TextBox();
@@ -41,8 +43,8 @@
             this.btnInvoiceEdit = new System.Windows.Forms.Button();
             this.btnInvoiceClear = new System.Windows.Forms.Button();
             this.btnInvoiceDelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.invoiceDGV = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -149,6 +151,7 @@
             this.btnInvoiceSave.TabIndex = 8;
             this.btnInvoiceSave.Text = "Speichern";
             this.btnInvoiceSave.UseVisualStyleBackColor = false;
+            this.btnInvoiceSave.Click += new System.EventHandler(this.btnInvoiceSave_Click);
             // 
             // btnInvoiceEdit
             // 
@@ -162,6 +165,7 @@
             this.btnInvoiceEdit.TabIndex = 9;
             this.btnInvoiceEdit.Text = "Bearbeiten";
             this.btnInvoiceEdit.UseVisualStyleBackColor = false;
+            this.btnInvoiceEdit.Click += new System.EventHandler(this.btnInvoiceEdit_Click);
             // 
             // btnInvoiceClear
             // 
@@ -175,6 +179,7 @@
             this.btnInvoiceClear.TabIndex = 10;
             this.btnInvoiceClear.Text = "Leeren";
             this.btnInvoiceClear.UseVisualStyleBackColor = false;
+            this.btnInvoiceClear.Click += new System.EventHandler(this.btnInvoiceClear_Click);
             // 
             // btnInvoiceDelete
             // 
@@ -188,19 +193,46 @@
             this.btnInvoiceDelete.TabIndex = 11;
             this.btnInvoiceDelete.Text = "Löschen";
             this.btnInvoiceDelete.UseVisualStyleBackColor = false;
+            this.btnInvoiceDelete.Click += new System.EventHandler(this.btnInvoiceDelete_Click);
             // 
-            // dataGridView1
+            // invoiceDGV
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 272);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1440, 632);
-            this.dataGridView1.TabIndex = 12;
+            this.invoiceDGV.AllowUserToAddRows = false;
+            this.invoiceDGV.AllowUserToDeleteRows = false;
+            this.invoiceDGV.AllowUserToResizeColumns = false;
+            this.invoiceDGV.AllowUserToResizeRows = false;
+            this.invoiceDGV.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.invoiceDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.invoiceDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.invoiceDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.invoiceDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.invoiceDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.invoiceDGV.GridColor = System.Drawing.Color.White;
+            this.invoiceDGV.Location = new System.Drawing.Point(0, 272);
+            this.invoiceDGV.MultiSelect = false;
+            this.invoiceDGV.Name = "invoiceDGV";
+            this.invoiceDGV.ReadOnly = true;
+            this.invoiceDGV.RowHeadersVisible = false;
+            this.invoiceDGV.RowHeadersWidth = 82;
+            this.invoiceDGV.RowTemplate.Height = 33;
+            this.invoiceDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.invoiceDGV.Size = new System.Drawing.Size(1440, 632);
+            this.invoiceDGV.TabIndex = 12;
+            this.invoiceDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceDGV_CellClick);
             // 
             // InvoiceScreen
             // 
@@ -208,7 +240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1440, 901);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.invoiceDGV);
             this.Controls.Add(this.btnInvoiceDelete);
             this.Controls.Add(this.btnInvoiceClear);
             this.Controls.Add(this.btnInvoiceEdit);
@@ -223,8 +255,9 @@
             this.Controls.Add(this.label1);
             this.Name = "InvoiceScreen";
             this.Text = "Rechnungs Verwaltung";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InvoiceScreen_FormClosed);
             this.Load += new System.EventHandler(this.InvoiceScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +277,6 @@
         private System.Windows.Forms.Button btnInvoiceEdit;
         private System.Windows.Forms.Button btnInvoiceClear;
         private System.Windows.Forms.Button btnInvoiceDelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView invoiceDGV;
     }
 }

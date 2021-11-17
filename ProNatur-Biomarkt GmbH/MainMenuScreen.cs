@@ -19,7 +19,10 @@ namespace ProNatur_Biomarkt_GmbH
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Dies ist ein Test");
+            //MessageBox.Show("Dies ist ein Test");
+            InvoiceScreen invoiceScreen = new InvoiceScreen();
+            invoiceScreen.Show();
+            this.Hide();
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
@@ -27,6 +30,11 @@ namespace ProNatur_Biomarkt_GmbH
             ProductsScreen productsScreen = new ProductsScreen();
             productsScreen.Show();
             this.Hide();
+        }
+
+        private void MainMenuScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
